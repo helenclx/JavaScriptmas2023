@@ -145,6 +145,7 @@ main {
     background-color: var(--clr-timer-bg);
     color: var(--clr-timer-txt);
     padding: 2em;
+    max-width: 90%;
 }
 
 h1 {
