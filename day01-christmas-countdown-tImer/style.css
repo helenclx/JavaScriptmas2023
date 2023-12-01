@@ -1,0 +1,196 @@
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+:root {
+    --ff-body:'Poppins';
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-time-caption: 1.5rem;
+    --fs-footer: 0.9rem;
+
+    --fw-700: 700;
+
+    --clr-timer-bg: rgba(13, 89, 1, 0.7);
+    --clr-timer-txt: white;
+}
+
+/* Screen sizes larger than mobile */
+@media only screen and (min-width: 30rem) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 3rem;
+        --fs-time-caption: 1.75rem;
+    }
+}
+
+/* Tablet screen size */
+@media only screen and (min-width: 43.75rem) {
+    :root {
+        --fs-h1: 4rem;
+        --fs-h2: 3.5rem;
+    }
+}
+
+/* Desktop screen size */
+@media only screen and (min-width: 60rem) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 4.3rem;
+        --fs-footer: 1rem;
+    }
+}
+
+/* ------------------- */
+/* CSS Reset           */
+/* ------------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* ------------------- */
+/* STYLING BEGINS      */
+/* ------------------- */
+
+/* General Styling */
+
+body {
+    font-family: var(--ff-body), Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    text-align: center;
+    background-image: url(img/christmas-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-timer-bg);
+    color: var(--clr-timer-txt);
+    padding: 2em;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+/* Custom classes */
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.time h2 {
+    font-weight: var(--fw-700);
+}
+
+.time p {
+    font-size: var(--fs-time-caption);
+}
+
+/* Screen sizes larger than mobile */
+@media only screen and (min-width: 30rem) {
+    .countdown {
+        gap: 1.5em;
+    }
+}
+
+/* Tablet screen size */
+@media only screen and (min-width: 43.75rem) {
+    .countdown {
+        gap: 2em;
+    }
+}
+
+/* Desktop screen size */
+@media only screen and (min-width: 60rem) {
+    .countdown {
+        gap: 2.5em;
+    }
+}
